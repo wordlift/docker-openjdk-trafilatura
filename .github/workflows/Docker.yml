@@ -2,16 +2,10 @@ name: Docker
 
 on:
   push:
-    # Publish `master` as Docker `latest` image.
     branches:
-      - master
-
-    # Publish `v1.2.3` tags as releases.
+      - main
     tags:
-      - *.*.*
-
-  # Run tests for any PRs.
-  pull_request:
+      - "*.*.*"
 
 jobs:
   docker:
@@ -27,7 +21,7 @@ jobs:
         run: |
           DOCKER_IMAGE=ghcr.io/wordlift/openjdk-18-trafilatura-1.4.0
           VERSION=latest
-          if [[ $GITHUB_REF == refs/tags/* ]]; then
+          if [[ $GITHUB_REF == refs/t`ags/* ]]; then
             VERSION=${GITHUB_REF#refs/tags/}
           fi
           TAGS="${DOCKER_IMAGE}:${VERSION}"
