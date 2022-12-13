@@ -2,6 +2,9 @@
 # https://pypi.org/project/trafilatura/ trafilatura 1.4.0
 FROM openjdk:18-slim-bullseye
 
+LABEL org.opencontainers.image.source=https://github.com/wordlift/docker-openjdk-trafilatura
+LABEL org.opencontainers.image.description="trafilatura + OpenJDK"
+
 RUN \
     # Print executed commands to terminal.
     set -ex ; \ 
