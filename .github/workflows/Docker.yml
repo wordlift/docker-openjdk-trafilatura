@@ -13,14 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Prepare
         id: prep
         run: |
           DOCKER_IMAGE=ghcr.io/wordlift/openjdk-18-trafilatura-1.4.0
           VERSION=latest
-          if [[ $GITHUB_REF == refs/t`ags/* ]]; then
+          if [[ $GITHUB_REF == refs/tags/* ]]; then
             VERSION=${GITHUB_REF#refs/tags/}
           fi
           TAGS="${DOCKER_IMAGE}:${VERSION}"
