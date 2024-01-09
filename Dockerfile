@@ -17,7 +17,7 @@ RUN pip install --upgrade pip
 RUN \
     set -ex ; \ 
     pip install cchardet==2.1.7 ; \
-    pip install trafilatura[all]==1.4.0
+    pip install trafilatura[all]==1.6.4 
 
 RUN \
     apt-mark auto '.*' > /dev/null; \
