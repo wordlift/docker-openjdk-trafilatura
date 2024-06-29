@@ -18,7 +18,7 @@ jobs:
       - name: Prepare
         id: prep
         run: |
-          DOCKER_IMAGE=ghcr.io/wordlift/openjdk-18-trafilatura
+          DOCKER_IMAGE=ghcr.io/wordlift/temurin-21-trafilatura
           VERSION=latest
           if [[ $GITHUB_REF == refs/tags/* ]]; then
             VERSION=${GITHUB_REF#refs/tags/}

@@ -16,7 +16,7 @@ RUN pip install --upgrade pip
 
 RUN \
     set -ex ; \ 
-    pip install faust-cchardet==2.1.7 ; \
+    pip install faust-cchardet==2.1.19 ; \
     pip install trafilatura[all]==1.11.0
 
 RUN \
