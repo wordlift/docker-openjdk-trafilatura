@@ -1,6 +1,6 @@
 # https://pypi.org/project/cchardet/ cchardet 2.1.7 requires python 3.9 and gcc 
 # https://pypi.org/project/trafilatura/ trafilatura 1.4.0
-FROM eclipse-temurin:21.0.2_13-jdk-jammy
+FROM eclipse-temurin:21.0.3_9-jdk-jammy
 
 LABEL org.opencontainers.image.source=https://github.com/wordlift/docker-openjdk-trafilatura
 LABEL org.opencontainers.image.description="trafilatura + OpenJDK"
