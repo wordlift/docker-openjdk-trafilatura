@@ -1,4 +1,4 @@
-# https://pypi.org/project/cchardet/ cchardet 2.1.7 requires python 3.9 and gcc 
+# https://pypi.org/project/cchardet/ cchardet 2.1.7 requires python 3.9 and gcc
 # https://pypi.org/project/trafilatura/ trafilatura 1.4.0
 FROM eclipse-temurin:21.0.3_9-jdk-jammy
 
@@ -7,7 +7,7 @@ LABEL org.opencontainers.image.description="trafilatura + OpenJDK"
 
 RUN \
     # Print executed commands to terminal.
-    set -ex ; \ 
+    set -ex ; \
     savedAptMark="$(apt-mark showmanual)" ; \
     apt-get update ; \
     apt install -y python3.11 python3-pip libcurl4-openssl-dev libssl-dev
@@ -15,9 +15,9 @@ RUN \
 RUN pip install --upgrade pip
 
 RUN \
-    set -ex ; \ 
+    set -ex ; \
     pip install faust-cchardet==2.1.19 ; \
-    pip install trafilatura[all]==1.11.0
+    pip install trafilatura[all]==2.0.0
 
 RUN \
     apt-mark auto '.*' > /dev/null; \
